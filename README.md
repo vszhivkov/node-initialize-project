@@ -4,10 +4,10 @@ Used as a generator of a project, by copying the contents of a boilerplate, but 
 
 ### Description:
 The info.js file in the src folder contains boilerplate and filters information.
-#### Boilerplate
+#### boilerplates
 - **name**: The name by which the boilerplate gets matched by user input, when asked for a boilerplate.
 - **path**: Exact path to the boilerplate folder.
-#### Filters
+#### filters
 User specified files to not transfer.
 
 ### Usage:
