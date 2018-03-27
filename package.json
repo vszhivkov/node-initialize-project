@@ -2,6 +2,7 @@
   "name": "node-initialize-project",
   "version": "1.0.0",
   "main": "init-project.js",
+  "author": "Vasil Zhivkov",
   "license": "MIT",
   "dependencies": {
     "copy-dir": "^0.3.0"

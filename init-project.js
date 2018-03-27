@@ -2,10 +2,10 @@
 
 class CreateProject {
     constructor() {
-        this.path = require('path');
         this.copydir = require('copy-dir');
         this.readl = require('readline');
-        this.boilerplates = require('./src/boilerplates').boilerplates;
+        this.boilerplates = require('./src/info').info.boilerplates;
+        this.filters = require('./src/info').info.filters;
 
         this.init();
     };
@@ -62,8 +62,10 @@ class CreateProject {
                     this
                         .copydir
                             .sync(boilerplate.path, `${process.cwd()}/${input}`, (stat, filepath, filename) => {
-                                if(filename == '.git') {
-                                    return false;
+                                for (const filter of this.filters) {
+                                    if(filename == filter) {
+                                        return false;
+                                    }
                                 }
 
                                 return true;
