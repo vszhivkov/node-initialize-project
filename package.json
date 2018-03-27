@@ -1,0 +1,17 @@
+{
+  "name": "node-initialize-project",
+  "version": "1.0.0",
+  "main": "init-project.js",
+  "license": "MIT",
+  "dependencies": {
+    "copy-dir": "^0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vszhivkov/node-initialize-project"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "init-project": "init-project.js"
+  }
+}
