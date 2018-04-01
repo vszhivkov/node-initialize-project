@@ -5,7 +5,6 @@ class CreateProject {
         this.copydir = require('copy-dir');
         this.readl = require('readline');
         this.boilerplates = require('./src/info').info.boilerplates;
-        this.filters = require('./src/info').info.filters;
 
         this.init();
     };
@@ -62,7 +61,7 @@ class CreateProject {
                     this
                         .copydir
                             .sync(boilerplate.path, `${process.cwd()}/${input}`, (stat, filepath, filename) => {
-                                for (const filter of this.filters) {
+                                for (const filter of boilerplate.filters) {
                                     if(filename == filter) {
                                         return false;
                                     }
